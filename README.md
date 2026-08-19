@@ -46,3 +46,41 @@ mishandle the `wp-content` directory and the `@ver=` asset filenames.
 python3 -m http.server 8899
 # http://127.0.0.1:8899/
 ```
+
+## Custom domain (jamesnightingale.net)
+
+Not yet attached. The site currently serves from `https://jammy2211.github.io/`.
+
+**Order matters.** Adding the `CNAME` file makes GitHub redirect `jammy2211.github.io`
+to the custom domain, so DNS must point at GitHub *first* — otherwise the redirect
+lands on whatever the old host is still serving.
+
+1. At the DNS host (currently HostGator, nameservers `ns8509/ns8510.hostgator.com`),
+   replace the `A` records for the apex with GitHub's four Pages addresses:
+
+   ```
+   A   @     185.199.108.153
+   A   @     185.199.109.153
+   A   @     185.199.110.153
+   A   @     185.199.111.153
+   CNAME www jammy2211.github.io.
+   ```
+
+   Remove the old `A` records pointing at `50.116.114.84` / `.85`.
+
+2. Confirm propagation: `dig +short jamesnightingale.net A` returns the 185.199.x
+   addresses.
+
+3. Add the domain: `echo jamesnightingale.net > CNAME`, commit, push. GitHub picks
+   it up on the next build.
+
+4. Wait for the certificate, then enforce HTTPS:
+
+   ```bash
+   gh api -X PUT repos/Jammy2211/Jammy2211.github.io/pages -f https_enforced=true
+   ```
+
+5. Only after all pages verify on the real domain, cancel the old hosting plan.
+   Keep the domain registration — GitHub Pages charges nothing for a custom domain.
+
+Registrar: Launchpad.com Inc. (Newfold/HostGator). Domain expires **2026-08-26**.
