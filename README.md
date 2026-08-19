@@ -1,0 +1,48 @@
+# jamesnightingale.net
+
+Static site for [James Nightingale](https://jamesnightingale.net), served by GitHub Pages.
+
+## Provenance
+
+Ported from the WordPress site (Twenty Sixteen theme) that ran on HostGator,
+using the mirror captured on 2026-08-14 in `~/backups/jamesnightingale.net/`.
+The markup is the original WordPress output, kept as-is. Changes made during the port:
+
+- Menu links rewritten from `?p=NNNN` permalinks to the directory URLs (`/cv/`, `/publications/`, …).
+- Removed WordPress endpoints with no static equivalent: `wp-admin/`, `wp-json/`,
+  `feed/`, `comments/`, `xmlrpc`, `wp-login`, and the duplicate `?p=` page copies.
+- Removed the emoji-loader script and oEmbed/RSD `<link>` tags, which pointed at the old host.
+- Google Fonts (vendored under `fonts.googleapis.com/` and `fonts.gstatic.com/`)
+  re-based to root-absolute paths.
+
+Verified after porting: all 8 pages and 347 assets serve 200 with no broken references,
+and the visible text of every page matches the live WordPress site.
+
+## Editing
+
+Pages are plain HTML — edit the relevant `index.html` and push:
+
+| URL | File |
+|-----|------|
+| `/` | `index.html` |
+| `/cv/` | `cv/index.html` |
+| `/publications/` | `publications/index.html` |
+| `/talks/` | `talks/index.html` |
+| `/cancer/` | `cancer/index.html` |
+| `/cosmology/` | `cosmology/index.html` |
+| `/euclid/` | `euclid/index.html` |
+| `/contact/` | `contact/index.html` |
+
+The page body sits inside `<div class="entry-content">`; everything around it is
+theme chrome, repeated in each file. Uploads (images, PDFs, slides) live under
+`wp-content/uploads/` and can be linked directly.
+
+`.nojekyll` is required — it stops GitHub Pages running Jekyll, which would
+mishandle the `wp-content` directory and the `@ver=` asset filenames.
+
+## Local preview
+
+```bash
+python3 -m http.server 8899
+# http://127.0.0.1:8899/
+```
