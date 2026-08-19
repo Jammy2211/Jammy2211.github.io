@@ -51,36 +51,54 @@ python3 -m http.server 8899
 
 Not yet attached. The site currently serves from `https://jammy2211.github.io/`.
 
-**Order matters.** Adding the `CNAME` file makes GitHub redirect `jammy2211.github.io`
-to the custom domain, so DNS must point at GitHub *first* — otherwise the redirect
-lands on whatever the old host is still serving.
+**Add the CNAME file BEFORE changing DNS.** GitHub Pages returns 404 for a domain it
+has not been told about, so flipping DNS first blacks the site out until the CNAME
+lands. Doing it in this order there is no downtime: the old host keeps serving the
+domain until DNS moves, and the moment it moves GitHub is already configured.
 
-1. At the DNS host (currently HostGator, nameservers `ns8509/ns8510.hostgator.com`),
-   replace the `A` records for the apex with GitHub's four Pages addresses:
-
-   ```
-   A   @     185.199.108.153
-   A   @     185.199.109.153
-   A   @     185.199.110.153
-   A   @     185.199.111.153
-   CNAME www jammy2211.github.io.
-   ```
-
-   Remove the old `A` records pointing at `50.116.114.84` / `.85`.
-
-2. Confirm propagation: `dig +short jamesnightingale.net A` returns the 185.199.x
-   addresses.
-
-3. Add the domain: `echo jamesnightingale.net > CNAME`, commit, push. GitHub picks
-   it up on the next build.
-
-4. Wait for the certificate, then enforce HTTPS:
+1. Attach the domain (this repo):
 
    ```bash
+   echo jamesnightingale.net > CNAME
+   git add CNAME && git commit -m "Attach jamesnightingale.net" && git push
+   ```
+
+   From here `jammy2211.github.io` redirects to `jamesnightingale.net`, which still
+   serves from the old host. That is expected.
+
+2. At the DNS host (HostGator, nameservers `ns8509/ns8510.hostgator.com`), replace
+   the single apex `A` record `50.116.114.85` with GitHub's four:
+
+   ```
+   A  @  185.199.108.153
+   A  @  185.199.109.153
+   A  @  185.199.110.153
+   A  @  185.199.111.153
+   ```
+
+   Leave everything else alone. `www` is a CNAME to the apex and follows
+   automatically; `mail`, `MX` and the SPF `TXT` record are separate and must not
+   be touched or email breaks.
+
+3. Wait for propagation — the record TTL is 14400s (4 hours). Check with
+   `dig +short jamesnightingale.net A`.
+
+4. GitHub then provisions a Let's Encrypt certificate, which needs DNS already
+   pointing at it. Between the DNS flip and the certificate being issued, `https://`
+   will warn. Do not enable enforcement until the cert exists:
+
+   ```bash
+   gh api repos/Jammy2211/Jammy2211.github.io/pages --jq .https_certificate.state
+   # once "approved":
    gh api -X PUT repos/Jammy2211/Jammy2211.github.io/pages -f https_enforced=true
    ```
 
-5. Only after all pages verify on the real domain, cancel the old hosting plan.
-   Keep the domain registration — GitHub Pages charges nothing for a custom domain.
+5. Verify every page on the real domain before touching the old host.
+
+6. Cancel the old **hosting** plan. Keep the **domain registration** — they are
+   separate line items, and GitHub Pages charges nothing for a custom domain.
+   Check first whether any `@jamesnightingale.net` mailbox is in use: `MX` and
+   `mail.jamesnightingale.net` both point at the old host, so cancelling hosting
+   destroys that mail.
 
 Registrar: Launchpad.com Inc. (Newfold/HostGator). Domain expires **2026-08-26**.
