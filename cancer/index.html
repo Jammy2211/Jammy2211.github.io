@@ -73,6 +73,9 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 <style id="custom-background-css">
 body.custom-background { background-color: #ffffff; }
 </style>
+<style id="cancer-page-css">
+.entry-content > figure { margin-bottom: 1.25em; }
+</style>
 </head>
 
 <body class="wp-singular page-template-default page page-id-2542 custom-background wp-embed-responsive wp-theme-twentysixteen no-sidebar">
@@ -147,10 +150,6 @@ body.custom-background { background-color: #ffffff; }
 
 
 
-<p class="wp-block-paragraph"></p>
-
-
-
 <p class="wp-block-paragraph">One of the most profound phenomena exhibited by nature is multiscale complexity, where complex behaviours emerge from the interactions between physical phenomena at different scales of organisation.  </p>
 
 
@@ -159,7 +158,9 @@ body.custom-background { background-color: #ffffff; }
 
 
 
-<p class="wp-block-paragraph">In Cosmology, I study gravity and dark matter on scales of the entire observable Universe. Analysis is performed on individual galaxies, including prescriptions on how their stars formed. Therefore, this links perhaps the largest scales one can comprehend &#8211; the entire Universe &#8211; to scales of the solar system we reside in.<br><br>In cancer research, the aim is to understand how measurable signals at the genetic level influence healthcare outcomes on a national scale. This involves linking data from a patient&#8217;s genome to broader metrics such as proteins and cells. By connecting these diverse measurements, we can gain insights into the complex interplay between genetics and overall health outcomes in the context of cancer care.</p>
+<p class="wp-block-paragraph">In Cosmology, I study gravity and dark matter on scales of the entire observable Universe. Analysis is performed on individual galaxies, including prescriptions on how their stars formed. Therefore, this links perhaps the largest scales one can comprehend &#8211; the entire Universe &#8211; to scales of the solar system we reside in.</p>
+
+<p class="wp-block-paragraph">In cancer research, the aim is to understand how measurable signals at the genetic level influence healthcare outcomes on a national scale. This involves linking data from a patient&#8217;s genome to broader metrics such as proteins and cells. By connecting these diverse measurements, we can gain insights into the complex interplay between genetics and overall health outcomes in the context of cancer care.</p>
 
 
 
@@ -171,15 +172,13 @@ body.custom-background { background-color: #ffffff; }
 
 
 
-<p class="wp-block-paragraph"></p>
+<p class="wp-block-paragraph">For this purpose, I develop statistical methods for multi-scale analysis, which are visually illustrated in the graphic above.</p>
+
+<p class="wp-block-paragraph">These statistics enable us to analyze small-scale data, like galaxy images or genetic sequences, while connecting them to broader signals of interest, such as cosmological phenomena or healthcare outcomes in clinical trials.</p>
 
 
 
-<p class="wp-block-paragraph">For this purpose, I develop statistical methods for multi-scale analysis, which are visually illustrated in the graphic above. <br><br>These statistics enable us to analyze small-scale data, like galaxy images or genetic sequences, while connecting them to broader signals of interest, such as cosmological phenomena or healthcare outcomes in clinical trials.</p>
-
-
-
-<p class="wp-block-paragraph">The statistical techniques are implemented in the open source software <strong><em><a href="https://github.com/rhayes777/PyAutoFit">PyAutoFit</a></em></strong>, which I developed in collaboration with the Biotech company Concr.Therefore, the same software package is being used to understand the mysteries of the Cosmos and better treat cancer here on Earth.  </p>
+<p class="wp-block-paragraph">The statistical techniques are implemented in the open source software <strong><em><a href="https://github.com/PyAutoLabs/PyAutoFit">PyAutoFit</a></em></strong>, which I developed in collaboration with the Biotech company Concr. Therefore, the same software package is being used to understand the mysteries of the Cosmos and better treat cancer here on Earth.  </p>
 
 
 
@@ -187,7 +186,7 @@ body.custom-background { background-color: #ffffff; }
 
 
 
-<p class="wp-block-paragraph"><strong>Carcinoma of Unknown Primary</strong> <strong>Site</strong></p>
+<h2 class="wp-block-heading">Carcinoma of Unknown Primary Site</h2>
 
 
 
@@ -207,7 +206,7 @@ body.custom-background { background-color: #ffffff; }
 
 
 
-<p class="wp-block-paragraph"><strong>Press:</strong></p>
+<h2 class="wp-block-heading">Press</h2>
 
 
 
@@ -219,31 +218,27 @@ body.custom-background { background-color: #ffffff; }
 
 
 
-<p class="wp-block-paragraph">You can watch the full interview at the following link:</p>
+<p class="wp-block-paragraph"><a href="https://www.facebook.com/watch/?v=3504354832998051">Watch the full interview on Facebook</a>.</p>
 
 
 
-<p class="wp-block-paragraph"><a href="https://www.facebook.com/watch/?v=3504354832998051">https://www.facebook.com/watch/?v=3504354832998051</a></p>
+<h2 class="wp-block-heading">PyAutoFit Links</h2>
 
 
 
-<p class="wp-block-paragraph"><strong>PyAutoFit</strong> <strong>Links:</strong></p>
+<p class="wp-block-paragraph"><strong>Code:</strong> <a href="https://github.com/PyAutoLabs/PyAutoFit">PyAutoFit on GitHub</a></p>
 
 
 
-<p class="wp-block-paragraph"><strong>GitHub: </strong><a href="https://github.com/rhayes777/PyAutoFit">https://github.com/rhayes777/PyAutoFit</a></p>
+<p class="wp-block-paragraph"><strong>Documentation:</strong> <a href="https://pyautofit.readthedocs.io/en/latest/">PyAutoFit documentation</a></p>
 
 
 
-<p class="wp-block-paragraph"><strong>readthedocs: </strong><a href="https://pyautofit.readthedocs.io/en/latest/">https://pyautofit.readthedocs.io/en/latest/</a></p>
+<p class="wp-block-paragraph"><strong>Software paper:</strong> <a href="https://joss.theoj.org/papers/10.21105/joss.02550">PyAutoFit in the Journal of Open Source Software</a></p>
 
 
 
-<p class="wp-block-paragraph"><strong>JOSS Paper:</strong><a href=" https://joss.theoj.org/papers/10.21105/joss.02550"> https://joss.theoj.org/papers/10.21105/joss.02550</a></p>
-
-
-
-<p class="wp-block-paragraph"><strong>Binder</strong> (This link runs <strong><em>PyAuto</em></strong>Fit in your web browser with no installation, checkout <strong>&#8216;introduction.ipynb&#8217;</strong> on the home page): <a href="https://mybinder.org/v2/gh/Jammy2211/autofit_workspace/HEAD">https://mybinder.org/v2/gh/Jammy2211/autofit_workspace/HEAD</a></p>
+<p class="wp-block-paragraph"><strong>Try PyAutoFit:</strong> <a href="https://colab.research.google.com/github/PyAutoLabs/autofit_workspace/blob/2026.9.15.1/notebooks/overview/overview_1_the_basics.ipynb">Open the first overview notebook in Google Colab</a> to explore PyAutoFit in your browser.</p>
 	</div><!-- .entry-content -->
 
 	
