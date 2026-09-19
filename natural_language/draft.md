@@ -46,18 +46,20 @@ open Claude Code, Codex or another supported AI coding agent, and start with:
 ::: {.science-request}
 **Your starting prompt**
 
-> I want to use the PyAutoLens Assistant:
-> https://github.com/PyAutoLabs/autolens_assistant
->
-> I'd like to understand how gravitational lensing can be used to measure the
-> black hole in Abell 1201.
->
-> Show me the data, explain what we are looking at, and walk me through
-> modelling the black hole as a point mass. Let's estimate its mass and
-> uncertainty and see how well the model reproduces the observations.
->
-> Explain what we are doing as we go, and let me ask questions or change the
-> analysis along the way.
+```{#starting-prompt .prompt-text}
+I want to use the PyAutoLens Assistant:
+https://github.com/PyAutoLabs/autolens_assistant
+
+I'd like to understand how gravitational lensing can be used to measure the
+black hole in Abell 1201.
+
+Show me the data, explain what we are looking at, and walk me through
+modelling the black hole as a point mass. Let's estimate its mass and
+uncertainty and see how well the model reproduces the observations.
+
+Explain what we are doing as we go, and let me ask questions or change the
+analysis along the way.
+```
 
 :::
 :::

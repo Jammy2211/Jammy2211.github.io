@@ -50,7 +50,8 @@ python3 natural_language/render.py
 ```
 
 The surrounding HTML retains the shared site theme. Page-specific responsive
-styles live in `natural_language/page.css`. The slides are linked directly
+styles live in `natural_language/page.css`; `natural_language/prompt.js` powers
+the prompt copy button. The slides are linked directly
 from `natural_language/NaturalLanguageLens.pptx`; the current deck focuses on
 PyAutoLens. The selected image and credit are in `assets/images/`.
 

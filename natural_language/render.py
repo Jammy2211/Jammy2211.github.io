@@ -18,6 +18,32 @@ def main():
         capture_output=True,
         check=True,
     ).stdout
+    # Markdown wraps for editing; the prompt wraps to the reader's screen.
+    rendered = re.sub(
+        r'(<pre id="starting-prompt"[^>]*><code>)(.*?)(</code></pre>)',
+        lambda match: match[1]
+        + "\n\n".join(
+            " ".join(paragraph.splitlines())
+            for paragraph in match[2].strip().split("\n\n")
+        )
+        + match[3],
+        rendered,
+        flags=re.S,
+    )
+    rendered = rendered.replace(
+        '<p><strong>Your starting prompt</strong></p>',
+        '<div class="prompt-toolbar"><span id="prompt-label">'
+        'Your starting prompt</span>'
+        '<button type="button" class="copy-prompt" '
+        'aria-label="Copy prompt" aria-controls="starting-prompt" hidden>'
+        'Copy</button></div>'
+        '<span class="screen-reader-text" id="copy-status" '
+        'role="status" aria-live="polite"></span>',
+    )
+    rendered = rendered.replace(
+        '<pre id="starting-prompt"',
+        '<pre tabindex="0" aria-labelledby="prompt-label" id="starting-prompt"',
+    )
     rendered = rendered.replace(
         'src="../assets/images/abell_1201_astrobites.png"',
         'src="../assets/images/abell_1201_astrobites.png" '

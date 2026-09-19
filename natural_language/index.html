@@ -62,7 +62,7 @@ body.custom-background { background-color: #ffffff; }
 </style>
 <meta name="description" content="James Nightingale is developing natural-language tools for scientific research, education and software development with AI.">
 <link rel="canonical" href="https://jamesnightingale.net/natural_language/">
-<link rel="stylesheet" href="page.css">
+<link rel="stylesheet" href="page.css?v=2">
 </head>
 
 <body class="wp-singular page-template-default page page-id-2395 custom-background wp-embed-responsive wp-theme-twentysixteen no-sidebar">
@@ -136,13 +136,14 @@ body.custom-background { background-color: #ffffff; }
 <div class="science-example">
 <p><img src="../assets/images/abell_1201_astrobites.png" width="842" height="846" decoding="async" alt="Abell 1201 with a bright arc of gravitationally lensed light." /></p>
 <div class="science-request">
-<p><strong>Your starting prompt</strong></p>
-<blockquote>
-<p>I want to use the PyAutoLens Assistant: https://github.com/PyAutoLabs/autolens_assistant</p>
-<p>I’d like to understand how gravitational lensing can be used to measure the black hole in Abell 1201.</p>
-<p>Show me the data, explain what we are looking at, and walk me through modelling the black hole as a point mass. Let’s estimate its mass and uncertainty and see how well the model reproduces the observations.</p>
-<p>Explain what we are doing as we go, and let me ask questions or change the analysis along the way.</p>
-</blockquote>
+<div class="prompt-toolbar"><span id="prompt-label">Your starting prompt</span><button type="button" class="copy-prompt" aria-label="Copy prompt" aria-controls="starting-prompt" hidden>Copy</button></div><span class="screen-reader-text" id="copy-status" role="status" aria-live="polite"></span>
+<pre tabindex="0" aria-labelledby="prompt-label" id="starting-prompt" class="prompt-text"><code>I want to use the PyAutoLens Assistant: https://github.com/PyAutoLabs/autolens_assistant
+
+I&#39;d like to understand how gravitational lensing can be used to measure the black hole in Abell 1201.
+
+Show me the data, explain what we are looking at, and walk me through modelling the black hole as a point mass. Let&#39;s estimate its mass and uncertainty and see how well the model reproduces the observations.
+
+Explain what we are doing as we go, and let me ask questions or change the analysis along the way.</code></pre>
 </div>
 </div>
 <div class="image-credit">
@@ -214,5 +215,6 @@ var screenReaderText = {"expand":"expand child menu","collapse":"collapse child 
 //# sourceURL=twentysixteen-script-js-extra
 </script>
 <script id="twentysixteen-script-js" src="../wp-content/themes/twentysixteen/js/functions.js@ver=20181217"></script>
+<script src="prompt.js" defer></script>
 </body>
 </html>
