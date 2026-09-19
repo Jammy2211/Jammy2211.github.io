@@ -1,6 +1,7 @@
 # Natural Language & AI
 
-**I believe natural language is becoming a new interface for doing science.**
+**I believe natural language is becoming the primary interface for doing science.**
+
 Scientists can increasingly describe the analysis they want to perform in the
 same language they use to think, discuss and write about their research, with
 agentic AI translating those instructions into computational workflows.
