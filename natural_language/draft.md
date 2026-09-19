@@ -22,21 +22,24 @@ the scientist provides the understanding, direction and judgement.
 **I am putting this vision into practice by redesigning my scientific
 software around natural language input.**
 
-The [PyAutoLens Assistant][lens-assistant] lets you explore gravitational
-lensing by describing what you want to investigate. An AI coding agent
-translates your request into code and computational steps, while you direct
-the analysis: inspect the results, ask questions, change direction and decide
-what happens next.
+The [PyAutoLens Assistant][lens-assistant] lets anyone investigate
+gravitational lenses through natural language, even if they are new to the
+science or have never used the software before. You describe what you want
+to understand, and an AI coding agent turns that request into an interactive
+analysis. You can inspect the data, ask questions, change the model and learn
+what each step means as you go.
+
+**You can measure the mass of a black hole yourself.** In
+[Abell 1201][black-hole-paper], my collaborators and I used gravitational
+lensing to discover a black hole around 33 billion times the mass of the Sun.
+With the assistant, you can explore the observations and work through a
+measurement of its mass, asking it to explain the lensing and guide you
+through the modelling. You do not need to arrive knowing all the physics or
+how to write the code: you can build that understanding through the analysis
+itself.
 
 **Try it yourself.** Follow the [assistant's setup guide][lens-assistant],
-open Claude Code, Codex or another supported AI coding agent, and choose one
-of the example datasets. Ask it to show you the data, explain what you are
-looking at and help you investigate a question of your own.
-
-I am also preparing a walkthrough of [Abell 1201][black-hole-paper], where
-my collaborators and I used gravitational lensing to discover a black hole
-around 33 billion times the mass of the Sun. This is the kind of conversation
-I want you to be able to have about that system:
+open Claude Code, Codex or another supported AI coding agent, and start with:
 
 ::: {.science-example}
 ![Abell 1201 with a bright arc of gravitationally lensed light.][abell-image]
@@ -57,9 +60,6 @@ I want you to be able to have about that system:
 > Explain what we are doing as we go, and let me ask questions or change the
 > analysis along the way.
 
-The Abell 1201 walkthrough is still in development. To try the assistant
-today, use the examples in its [setup guide][lens-assistant].
-
 :::
 :::
 
@@ -68,11 +68,11 @@ Abell 1201. Image: Nightingale et al. (2023), via [Astrobites][astrobites].
 The image shows the lens system; the black hole is not directly visible.
 :::
 
-You do not need to know the software's programming interface to start that
-conversation. Even if gravitational lensing is new to you, you can begin by
-asking what the image shows, learn why a modelling choice matters, and work
-towards a black-hole mass measurement yourself. The conversation gives you a
-way into the science, with the opportunity to question each step as you go.
+That is what excites me about natural language as an interface to science:
+you can go from asking “How do we weigh a black hole?” to working with real
+observations and estimating its mass yourself. You remain part of the
+analysis throughout, questioning the assumptions, exploring the results and
+deciding what to investigate next.
 
 ## Learning the science
 
