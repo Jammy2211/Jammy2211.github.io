@@ -1,11 +1,24 @@
 # Natural Language & AI
 
-I am pioneering ways for scientists to do research through natural language:
-describing an idea, asking a question or requesting an analysis in the words
-they already use to discuss their science. Agentic AI makes this possible by
-turning those instructions into code and computational workflows. My aim is
-to put more research capability into scientists' hands, while keeping them
-in control of the questions, assumptions and interpretation.
+I believe natural language is becoming a new interface for doing science.
+Scientists can increasingly describe the analysis they want to perform in the
+same language they use to think, discuss and write about their research, with
+agentic AI translating those instructions into computational workflows.
+
+For decades, turning a scientific idea into a computational analysis has
+required learning the technical syntax of programming languages and software
+APIs. Natural language changes that starting point: scientists can describe
+what they want to investigate without first learning how to express every
+step in code. AI translates their intent into the code, calculations and
+figures needed to carry it out. The underlying software remains available to
+inspect and adapt, but its syntax no longer has to be the barrier to using it.
+
+The scientist is still making the computer do the science. They choose the
+questions, direct the analysis and judge what the results mean. My aim is to
+make natural language the primary way scientists turn ideas into research,
+with AI expanding what they can do while preserving their control and
+autonomy. Natural language provides the interface; AI provides the capability;
+the scientist provides the understanding and direction.
 
 ## Scientific assistants
 
