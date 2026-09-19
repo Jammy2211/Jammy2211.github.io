@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+"""Update this static page's content from its Markdown source using Pandoc."""
+
+from pathlib import Path
+import re
+import subprocess
+
+
+def main():
+    directory = Path(__file__).resolve().parent
+    markdown = (directory / "draft.md").read_text(encoding="utf-8")
+    # The surrounding site template owns the visible page title.
+    body = markdown.split("\n", 1)[1]
+    rendered = subprocess.run(
+        ["pandoc", "--from=markdown-implicit_figures", "--to=html5", "--wrap=auto"],
+        input=body,
+        text=True,
+        capture_output=True,
+        check=True,
+    ).stdout
+    rendered = rendered.replace(
+        'src="../assets/images/abell_1201_astrobites.png"',
+        'src="../assets/images/abell_1201_astrobites.png" '
+        'width="842" height="846" decoding="async"',
+    )
+    page = directory / "index.html"
+    updated, count = re.subn(
+        r'(<div class="entry-content">).*?(</div><!-- .entry-content -->)',
+        lambda match: match[1] + "\n" + rendered + "\n\t" + match[2],
+        page.read_text(encoding="utf-8"),
+        count=1,
+        flags=re.S,
+    )
+    if count != 1:
+        raise SystemExit("Expected one entry-content section in index.html")
+    page.write_text(updated, encoding="utf-8")
+
+
+if __name__ == "__main__":
+    main()

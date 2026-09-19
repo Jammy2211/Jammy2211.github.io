@@ -32,6 +32,7 @@ Pages are plain HTML — edit the relevant `index.html` and push:
 | `/cosmology/` | `cosmology/index.html` |
 | `/euclid/` | `euclid/index.html` |
 | `/contact/` | `contact/index.html` |
+| `/natural_language/` | `natural_language/index.html` |
 
 The page body sits inside `<div class="entry-content">`; everything around it is
 theme chrome, repeated in each file. Uploads (images, PDFs, slides) live under
@@ -39,6 +40,19 @@ theme chrome, repeated in each file. Uploads (images, PDFs, slides) live under
 
 `.nojekyll` is required — it stops GitHub Pages running Jekyll, which would
 mishandle the `wp-content` directory and the `@ver=` asset filenames.
+
+### Natural Language & AI page
+
+Edit `natural_language/draft.md`, then regenerate its HTML body with Pandoc:
+
+```bash
+python3 natural_language/render.py
+```
+
+The surrounding HTML retains the shared site theme. Page-specific responsive
+styles live in `natural_language/page.css`. The slides are linked directly
+from `natural_language/NaturalLanguageLens.pptx`; the current deck focuses on
+PyAutoLens. The selected image and credit are in `assets/images/`.
 
 ## Local preview
 
