@@ -24,19 +24,17 @@ software around natural language input.**
 
 The [PyAutoLens Assistant][lens-assistant] lets anyone investigate
 gravitational lenses through natural language, even if they are new to the
-science or have never used the software before. You describe what you want
-to understand, and an AI coding agent turns that request into an interactive
-analysis. You can inspect the data, ask questions, change the model and learn
-what each step means as you go.
+science or software. You describe what you want to understand, and an AI
+coding agent turns that request into an interactive analysis where you can
+inspect the data, ask questions, change the model and learn as you go.
 
-**You can measure the mass of a black hole yourself.** In
+You can measure the mass of a black hole yourself. In
 [Abell 1201][black-hole-paper], my collaborators and I used gravitational
 lensing to discover a black hole around 33 billion times the mass of the Sun.
-With the assistant, you can explore the observations and work through a
-measurement of its mass, asking it to explain the lensing and guide you
-through the modelling. You do not need to arrive knowing all the physics or
-how to write the code: you can build that understanding through the analysis
-itself.
+With the assistant, you can explore the observations, measure its mass and ask
+it to explain the lensing and modelling as you go. You do not need to know all
+the physics or write the code beforehand: you can build that understanding
+through the analysis itself.
 
 **Try it yourself.** Follow the [assistant's setup guide][lens-assistant],
 open Claude Code, Codex or another supported AI coding agent, and start with:
@@ -70,27 +68,36 @@ The image shows the lens system; the black hole is not directly visible.
 
 That is what excites me about natural language as an interface to science:
 you can go from asking “How do we weigh a black hole?” to working with real
-observations and estimating its mass yourself. You remain part of the
-analysis throughout, questioning the assumptions, exploring the results and
-deciding what to investigate next.
+observations and estimating its mass yourself. You stay involved throughout,
+questioning assumptions, exploring results and deciding what to investigate
+next.
 
 ## Learning the science
 
-Directing an analysis requires understanding the science behind it. For
-lensing, that includes gravity, galaxy structure and Bayesian inference:
-how we use data to constrain models and quantify uncertainty. Easier access
-to sophisticated tools makes the ability to question their results essential.
+Being able to measure a black hole mass through natural language does not remove
+the need to understand the science
+behind that measurement. To direct an analysis well, you still need to
+understand the physics, the modelling
+assumptions and how uncertainty is quantified. I design my natural-language
+software with that in mind: easier access to
+sophisticated analysis should make scientific understanding more important, not
+less.
 
-I build that education into the same ecosystem. [HowToLens][howtolens]
-teaches gravitational lensing and lens modelling from first principles,
-pairing explanations with Python that readers can run and explore.
-[HowToGalaxy][howtogalaxy] and [HowToFit][howtofit] do the same for galaxy
-modelling and statistical inference. Researchers can build their knowledge
-while learning to direct an assistant and assess its work.
+This is why I am building education directly into my natural-language software
+ecosystem.
+The [HowToLens Lectures][howtolens] teach gravitational lensing from first
+principles, pairing explanations with Python
+that readers can run and explore. The PyAutoLens Assistant can also act as a
+teacher, explaining concepts, answering
+questions and helping users understand the analysis they are directing.
 
-You can [try the first HowToLens science lecture in Google Colab][colab]
-in your browser. Colab's Gemini integration lets eligible users ask
-questions about the notebook's concepts and code as they read and run it.
+The aim is that a researcher first develops the knowledge needed to understand
+and direct an analysis, and can then use
+natural language to put that knowledge into practice. You
+can [try the first HowToLens science lecture in Google Colab][colab] in your
+browser, where eligible users can also use
+Colab's Gemini integration to ask questions about the science and code as they
+work through it.
 
 ## Building software through natural language
 
@@ -103,11 +110,19 @@ scientific tools with how researchers learn to use them and carry out science.
 
 ## Teaching natural-language science
 
-I have delivered my workshop *Using Natural Language to Do Science: How
-Agentic AI Empowers Astronomers* three times. It explores how researchers
-can use conversation to understand software, develop analyses, investigate
-results and refine their scientific questions, while retaining the knowledge
-and judgement needed to lead the research.
+I teach these ideas through my workshop Using Natural Language to Do Science:
+How Agentic AI Empowers Astronomers.
+It shows researchers how natural language can become the starting point for
+scientific work: understanding unfamiliar
+software, developing analyses, running and debugging code, interrogating results
+and refining scientific questions
+with an AI coding assistant.
+
+The message is the same as for my software: the scientist leads the research,
+while AI removes technical friction between
+an idea and putting it into practice. The aim is to help researchers work this
+way confidently while retaining the
+scientific understanding, judgement and autonomy needed to direct the science.
 
 [Download the workshop slides (PowerPoint)][slides]. This version focuses
 on PyAutoLens.
