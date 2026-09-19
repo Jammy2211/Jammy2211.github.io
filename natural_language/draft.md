@@ -1,50 +1,65 @@
 # Natural Language & AI
 
-I believe natural language is becoming a new interface for doing science.
+**I believe natural language is becoming a new interface for doing science.**
 Scientists can increasingly describe the analysis they want to perform in the
 same language they use to think, discuss and write about their research, with
 agentic AI translating those instructions into computational workflows.
 
 For decades, turning a scientific idea into a computational analysis has
-required learning the technical syntax of programming languages and software
-APIs. Natural language changes that starting point: scientists can describe
-what they want to investigate without first learning how to express every
-step in code. AI translates their intent into the code, calculations and
-figures needed to carry it out. The underlying software remains available to
-inspect and adapt, but its syntax no longer has to be the barrier to using it.
+required expressing it through the technical syntax of programming languages and
+software APIs. That syntax was never the science itself: it was the interface
+between the scientist's ideas and the computer carrying them out. Removing that
+barrier lets scientists spend less time translating their thinking into code and
+more time thinking about the scientific questions they want to answer.
 
-The scientist is still making the computer do the science. They choose the
-questions, direct the analysis and judge what the results mean. My aim is to
-make natural language the primary way scientists turn ideas into research,
-with AI expanding what they can do while preserving their control and
+My aim is to make natural language the primary way scientists turn ideas into
+research, with AI expanding what they can do while preserving their control and
 autonomy. Natural language provides the interface; AI provides the capability;
-the scientist provides the understanding and direction.
+the scientist provides the understanding, direction and judgement.
 
 ## Scientific assistants
 
-I am putting this approach into practice through dedicated scientific
-assistants. The [PyAutoLens Assistant][lens-assistant] helps researchers
-analyse gravitational lenses: systems in which a galaxy's gravity bends
-the light from a more distant galaxy into arcs or multiple images.
-Researchers describe the analysis they want, discuss choices with the
-assistant, and inspect the code, figures and results it produces.
+**I am putting this vision into practice by redesigning my scientific
+software around natural language input.**
 
-One example comes from my research on [Abell 1201][black-hole-paper], where
-my collaborators and I discovered a black hole around 33 billion times
-the mass of the Sun through its effect on gravitationally lensed light.
-An instruction to investigate its mass could be:
+The [PyAutoLens Assistant][lens-assistant] lets you explore gravitational
+lensing by describing what you want to investigate. An AI coding agent
+translates your request into code and computational steps, while you direct
+the analysis: inspect the results, ask questions, change direction and decide
+what happens next.
+
+**Try it yourself.** Follow the [assistant's setup guide][lens-assistant],
+open Claude Code, Codex or another supported AI coding agent, and choose one
+of the example datasets. Ask it to show you the data, explain what you are
+looking at and help you investigate a question of your own.
+
+I am also preparing a walkthrough of [Abell 1201][black-hole-paper], where
+my collaborators and I used gravitational lensing to discover a black hole
+around 33 billion times the mass of the Sun. This is the kind of conversation
+I want you to be able to have about that system:
 
 ::: {.science-example}
 ![Abell 1201 with a bright arc of gravitationally lensed light.][abell-image]
 
 ::: {.science-request}
-**An example scientific instruction**
+**Your starting prompt**
 
-> Model the black hole at the centre of Abell 1201 as a point mass.
-> Estimate its mass and uncertainty, and show how well the model fits
-> the observations.
+> I want to use the PyAutoLens Assistant:
+> https://github.com/PyAutoLabs/autolens_assistant
+>
+> I'd like to understand how gravitational lensing can be used to measure the
+> black hole in Abell 1201.
+>
+> Show me the data, explain what we are looking at, and walk me through
+> modelling the black hole as a point mass. Let's estimate its mass and
+> uncertainty and see how well the model reproduces the observations.
+>
+> Explain what we are doing as we go, and let me ask questions or change the
+> analysis along the way.
 
-This example is being developed and validated as an assistant benchmark.
+The Abell 1201 walkthrough is still in development. To try the assistant
+today, use the examples in its [setup guide][lens-assistant].
+
 :::
 :::
 
@@ -53,18 +68,11 @@ Abell 1201. Image: Nightingale et al. (2023), via [Astrobites][astrobites].
 The image shows the lens system; the black hole is not directly visible.
 :::
 
-The scientist supplies the research direction and judges the result.
-“Assistant” describes that relationship: the researcher leads and decides
-what to delegate. I am extending this approach through the
-[PyAutoGalaxy][galaxy-assistant], [PyAutoFit][fit-assistant] and
-[PyAutoCTI][cti-assistant] assistants, for galaxy structure, statistical
-inference and the correction of distortions introduced by telescope detectors.
-
-This also changes how I introduce people to my software. The
-[PyAutoLens getting-started guide][lens] begins with the assistant, making
-scientific questions and natural-language instructions the entry point.
-The Python API and worked Jupyter notebooks provide the next layer of
-detail, so users can understand, inspect and adapt the underlying analysis.
+You do not need to know the software's programming interface to start that
+conversation. Even if gravitational lensing is new to you, you can begin by
+asking what the image shows, learn why a modelling choice matters, and work
+towards a black-hole mass measurement yourself. The conversation gives you a
+way into the science, with the opportunity to question each step as you go.
 
 ## Learning the science
 

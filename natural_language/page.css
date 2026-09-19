@@ -19,6 +19,7 @@
 
 .science-request {
   min-width: 0;
+  overflow-wrap: anywhere;
   padding: 1.4rem;
   background: #f4f5f8;
   border-top: 3px solid #293d79;
