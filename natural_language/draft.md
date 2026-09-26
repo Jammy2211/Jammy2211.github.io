@@ -158,7 +158,7 @@ on PyAutoLens.
 [ring-image]: ../assets/images/cosmos_web_ring_rgb.png
 [cowls]: https://arxiv.org/abs/2503.08777
 [mercier]: https://arxiv.org/abs/2309.15986
-[colab-ring]: https://colab.research.google.com/github/PyAutoLabs/autolens_assistant/blob/main/docs/colab/cosmos_web_ring_colab.ipynb
+[colab-ring]: https://colab.research.google.com/github/PyAutoLabs/autolens_assistant/blob/2026.9.26.1/docs/colab/cosmos_web_ring_colab.ipynb
 [howtolens]: https://github.com/PyAutoLabs/HowToLens
 [howtogalaxy]: https://github.com/PyAutoLabs/HowToGalaxy
 [howtofit]: https://github.com/PyAutoLabs/HowToFit
