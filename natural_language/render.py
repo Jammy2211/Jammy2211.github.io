@@ -44,10 +44,15 @@ def main():
         '<pre id="starting-prompt"',
         '<pre tabindex="0" aria-labelledby="prompt-label" id="starting-prompt"',
     )
+    # The notebook route is a plain link card: same header, no copy button.
     rendered = rendered.replace(
-        'src="../assets/images/abell_1201_astrobites.png"',
-        'src="../assets/images/abell_1201_astrobites.png" '
-        'width="842" height="846" decoding="async"',
+        '<p><strong>Prefer a notebook?</strong></p>',
+        '<div class="prompt-toolbar"><span>Prefer a notebook?</span></div>',
+    )
+    rendered = rendered.replace(
+        'src="../assets/images/cosmos_web_ring_rgb.png"',
+        'src="../assets/images/cosmos_web_ring_rgb.png" '
+        'width="840" height="840" decoding="async"',
     )
     page = directory / "index.html"
     updated, count = re.subn(
