@@ -47,8 +47,9 @@ itself.
 The assistant starts by asking who you are, whether a curious reader, a
 student or a researcher, and pitches the walkthrough to your background.
 
-**Try it yourself.** Follow the [assistant's setup guide][lens-assistant],
-open Claude Code, Codex or another supported AI coding agent, and start with:
+**Try it yourself.** Open Claude Code, Codex or another supported AI coding
+agent and start with this prompt; the agent installs the
+[assistant][lens-assistant] itself:
 
 ::: {.science-example}
 ![The COSMOS-Web Ring: a near-complete ring of lensed light around a massive galaxy, imaged by JWST.][ring-image]
@@ -59,6 +60,7 @@ open Claude Code, Codex or another supported AI coding agent, and start with:
 ```{#starting-prompt .prompt-text}
 I want to use the PyAutoLens Assistant:
 https://github.com/PyAutoLabs/autolens_assistant
+First clone that repository, cd into it and follow its AGENTS.md.
 
 I'd like to understand how gravitational lensing works using the JWST image
 of the COSMOS-Web Ring that ships with the assistant. Show me the picture,
