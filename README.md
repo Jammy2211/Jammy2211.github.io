@@ -55,6 +55,18 @@ the prompt copy button. The slides are linked directly
 from `natural_language/NaturalLanguageLens.pptx`; the current deck focuses on
 PyAutoLens. The selected image and credit are in `assets/images/`.
 
+### Euclid page
+
+The "Every Euclid Paper (So Far)" list at the end of `euclid/index.html` is
+generated from the arXiv API. Refresh it, including the paper count, with:
+
+```bash
+python3 euclid/papers.py
+```
+
+The script replaces everything between the `euclid-papers` comment markers.
+The list styles live in `euclid/page.css`.
+
 ## Local preview
 
 ```bash
