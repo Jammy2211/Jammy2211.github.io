@@ -146,10 +146,11 @@ an idea and putting it into practice. The aim is to help researchers work this
 way confidently while retaining the
 scientific understanding, judgement and autonomy needed to direct the science.
 
-[Download the workshop slides (PowerPoint)][slides]. This version focuses
-on PyAutoLens.
+[View the workshop slides online][slides] or [download them as
+PowerPoint][slides-pptx]. This version focuses on PyAutoLens.
 
-[slides]: NaturalLanguageLens.pptx
+[slides]: ../talks/natural_language_lens/
+[slides-pptx]: NaturalLanguageLens.pptx
 [lens-assistant]: https://github.com/PyAutoLabs/autolens_assistant
 [galaxy-assistant]: https://github.com/PyAutoLabs/autogalaxy_assistant
 [fit-assistant]: https://github.com/PyAutoLabs/autofit_assistant
