@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 820" width="560" height="820" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <!-- Three aspects of code optimisation, stacked as cards: Trust (a test
+       run ending in a pass tick), Expertise (matrix, geometry, GPU chip)
+       and Time (an hourglass beside a calendar). -->
+  <rect width="560" height="820" fill="white"/>
+
+  <!-- Trust -->
+  <g>
+    <rect x="20" y="20" width="520" height="240" rx="18" fill="#eaf6ee" stroke="#2e8b57" stroke-width="4"/>
+    <text x="50" y="68" font-size="30" font-weight="700" fill="#202020">Trust</text>
+    <rect x="50" y="90" width="300" height="140" rx="10" fill="#1e1e1e"/>
+    <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="17">
+      <text x="66" y="122" fill="#9cdcfe">$ python fit.py</text>
+      <text x="66" y="150" fill="#d4d4d4">run time: 0.41 s</text>
+      <text x="66" y="178" fill="#d4d4d4">log L = -1532.07</text>
+      <text x="66" y="206" fill="#6fd08c">matches reference ✓</text>
+    </g>
+    <circle cx="445" cy="160" r="62" fill="#2e8b57"/>
+    <path d="M415 160 L438 184 L478 136" fill="none" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Expertise -->
+  <g>
+    <rect x="20" y="290" width="520" height="240" rx="18" fill="#efe9fb" stroke="#7a3fd1" stroke-width="4"/>
+    <text x="50" y="338" font-size="30" font-weight="700" fill="#202020">Expertise</text>
+    <!-- matrix -->
+    <g font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="20" fill="#202020">
+      <path d="M60 370 L50 370 L50 490 L60 490" fill="none" stroke="#202020" stroke-width="3"/>
+      <path d="M170 370 L180 370 L180 490 L170 490" fill="none" stroke="#202020" stroke-width="3"/>
+      <text x="62" y="402">a</text><text x="100" y="402">b</text><text x="140" y="402">c</text>
+      <text x="62" y="440">d</text><text x="100" y="440">e</text><text x="140" y="440">f</text>
+      <text x="62" y="478">g</text><text x="100" y="478">h</text><text x="140" y="478">i</text>
+    </g>
+    <text x="115" y="518" text-anchor="middle" font-size="17" fill="#6b6b6b">linear algebra</text>
+    <!-- triangulation -->
+    <g stroke="#7a3fd1" stroke-width="3" fill="#ddd0f6">
+      <path d="M215 470 L265 375 L320 455 Z"/>
+      <path d="M265 375 L330 385 L320 455 Z" fill="#cbb8f0"/>
+      <path d="M215 470 L320 455 L285 495 Z" fill="#e8dffa"/>
+    </g>
+    <g fill="#7a3fd1">
+      <circle cx="215" cy="470" r="6"/><circle cx="265" cy="375" r="6"/>
+      <circle cx="320" cy="455" r="6"/><circle cx="330" cy="385" r="6"/>
+      <circle cx="285" cy="495" r="6"/>
+    </g>
+    <text x="272" y="518" text-anchor="middle" font-size="17" fill="#6b6b6b">geometry</text>
+    <!-- chip -->
+    <g stroke="#7a3fd1" stroke-width="4" stroke-linecap="round">
+      <line x1="395" y1="370" x2="395" y2="385"/><line x1="425" y1="370" x2="425" y2="385"/>
+      <line x1="455" y1="370" x2="455" y2="385"/><line x1="485" y1="370" x2="485" y2="385"/>
+      <line x1="395" y1="475" x2="395" y2="490"/><line x1="425" y1="475" x2="425" y2="490"/>
+      <line x1="455" y1="475" x2="455" y2="490"/><line x1="485" y1="475" x2="485" y2="490"/>
+      <line x1="365" y1="400" x2="380" y2="400"/><line x1="365" y1="430" x2="380" y2="430"/>
+      <line x1="365" y1="460" x2="380" y2="460"/>
+      <line x1="500" y1="400" x2="515" y2="400"/><line x1="500" y1="430" x2="515" y2="430"/>
+      <line x1="500" y1="460" x2="515" y2="460"/>
+    </g>
+    <rect x="380" y="385" width="120" height="90" rx="10" fill="#3b2a66"/>
+    <text x="440" y="440" text-anchor="middle" font-size="26" font-weight="700" fill="white">GPU</text>
+    <text x="440" y="518" text-anchor="middle" font-size="17" fill="#6b6b6b">CPU / GPU</text>
+  </g>
+
+  <!-- Time -->
+  <g>
+    <rect x="20" y="560" width="520" height="240" rx="18" fill="#fdf1e2" stroke="#d9822b" stroke-width="4"/>
+    <text x="50" y="608" font-size="30" font-weight="700" fill="#202020">Time</text>
+    <!-- hourglass -->
+    <g transform="translate(120 700)">
+      <rect x="-55" y="-75" width="110" height="12" rx="4" fill="#8a6a45"/>
+      <rect x="-55" y="63" width="110" height="12" rx="4" fill="#8a6a45"/>
+      <path d="M-42 -63 L42 -63 Q42 -20 6 0 Q42 20 42 63 L-42 63 Q-42 20 -6 0 Q-42 -20 -42 -63 Z" fill="#fffaf2" stroke="#d9822b" stroke-width="4"/>
+      <path d="M-26 -36 L26 -36 Q20 -16 0 -4 Q-20 -16 -26 -36 Z" fill="#e8b25c"/>
+      <line x1="0" y1="-4" x2="0" y2="40" stroke="#e8b25c" stroke-width="3"/>
+      <path d="M-36 60 Q0 20 36 60 Z" fill="#e8b25c"/>
+    </g>
+    <!-- calendar with days crossed off -->
+    <g transform="translate(250 625)">
+      <rect x="0" y="0" width="250" height="150" rx="10" fill="white" stroke="#d9822b" stroke-width="4"/>
+      <rect x="0" y="0" width="250" height="32" rx="10" fill="#d9822b"/>
+      <rect x="0" y="20" width="250" height="12" fill="#d9822b"/>
+      <g stroke="#c0392b" stroke-width="3" stroke-linecap="round">
+        <path d="M18 48 l22 22 M40 48 l-22 22"/>
+        <path d="M66 48 l22 22 M88 48 l-22 22"/>
+        <path d="M114 48 l22 22 M136 48 l-22 22"/>
+        <path d="M162 48 l22 22 M184 48 l-22 22"/>
+        <path d="M210 48 l22 22 M232 48 l-22 22"/>
+        <path d="M18 86 l22 22 M40 86 l-22 22"/>
+        <path d="M66 86 l22 22 M88 86 l-22 22"/>
+        <path d="M114 86 l22 22 M136 86 l-22 22"/>
+      </g>
+      <g fill="none" stroke="#c7b48e" stroke-width="2">
+        <rect x="162" y="86" width="22" height="22" rx="3"/>
+        <rect x="210" y="86" width="22" height="22" rx="3"/>
+      </g>
+      <text x="125" y="138" text-anchor="middle" font-size="16" fill="#6b6b6b">science on hold</text>
+    </g>
+  </g>
+</svg>

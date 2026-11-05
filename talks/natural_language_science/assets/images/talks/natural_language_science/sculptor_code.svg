@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 720" width="640" height="720" font-family="Menlo, Consolas, 'DejaVu Sans Mono', monospace">
+  <!-- An original illustration: a sculptor with mallet and chisel carving
+       lines of code out of a block of marble. The top of the block is
+       already carved into code; the bottom is still rough stone. -->
+  <defs>
+    <linearGradient id="marble" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4f2ee"/>
+      <stop offset="0.6" stop-color="#e2ded6"/>
+      <stop offset="1" stop-color="#cfc9be"/>
+    </linearGradient>
+    <linearGradient id="studio" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdf6ea"/>
+      <stop offset="1" stop-color="#f1e4cc"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0.62" cy="0.3" r="0.6">
+      <stop offset="0" stop-color="#fff6d6" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fff6d6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- studio backdrop -->
+  <rect width="640" height="720" fill="url(#studio)"/>
+  <rect width="640" height="720" fill="url(#light)"/>
+  <rect y="610" width="640" height="110" fill="#d9c7a6"/>
+  <line x1="0" y1="610" x2="640" y2="610" stroke="#b9a37c" stroke-width="3"/>
+
+  <!-- plinth -->
+  <rect x="300" y="560" width="270" height="60" rx="4" fill="#8a6a45"/>
+  <rect x="290" y="550" width="290" height="16" rx="4" fill="#a07c52"/>
+  <ellipse cx="435" cy="630" rx="170" ry="10" fill="#000" opacity="0.12"/>
+
+  <!-- marble block: rough lower half -->
+  <path d="M318 550 L322 380 L335 372 L548 368 L560 380 L556 550 Z" fill="url(#marble)" stroke="#a9a196" stroke-width="3"/>
+  <g stroke="#b8b0a4" stroke-width="2" fill="none" opacity="0.8">
+    <path d="M340 430 Q380 420 410 445 T480 440"/>
+    <path d="M360 500 Q400 485 450 505 T540 495"/>
+    <path d="M330 470 L350 462"/>
+    <path d="M500 410 L530 420 L545 412"/>
+  </g>
+
+  <!-- carved upper half: lines of code emerging from the stone -->
+  <g>
+    <path d="M335 372 L338 330 L360 330 L360 300 L395 300 L395 268 L420 268 L420 236 L470 236 L470 268 L520 268 L520 300 L540 300 L540 336 L548 368 Z"
+          fill="url(#marble)" stroke="#a9a196" stroke-width="3"/>
+    <g font-size="15" font-weight="700">
+      <text x="428" y="258" fill="#1a4fd6">def</text>
+      <text x="402" y="290" fill="#202020">  fit(data):</text>
+      <text x="366" y="322" fill="#7a3fd1">for</text>
+      <text x="398" y="322" fill="#202020">lens in data:</text>
+      <text x="344" y="354" fill="#c0392b">return</text>
+      <text x="408" y="354" fill="#202020">model(lens)</text>
+    </g>
+  </g>
+
+  <!-- stone chips flying from the chisel point -->
+  <g fill="#e6e1d8" stroke="#a9a196" stroke-width="1.5">
+    <path d="M318 410 l-14 -6 l-4 10 z"/>
+    <path d="M300 432 l-10 2 l2 9 z"/>
+    <path d="M290 395 l-9 -8 l-6 7 z"/>
+    <path d="M276 420 l-7 -2 l-1 7 z"/>
+  </g>
+  <g stroke="#c9a96b" stroke-width="2.5" stroke-linecap="round">
+    <line x1="306" y1="390" x2="296" y2="378"/>
+    <line x1="300" y1="418" x2="286" y2="420"/>
+  </g>
+
+  <!-- sculptor -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- legs -->
+    <path d="M150 470 L130 600" stroke="#3b4a63" stroke-width="26" fill="none"/>
+    <path d="M190 470 L215 600" stroke="#3b4a63" stroke-width="26" fill="none"/>
+    <ellipse cx="122" cy="606" rx="26" ry="10" fill="#3a2a1a"/>
+    <ellipse cx="226" cy="606" rx="26" ry="10" fill="#3a2a1a"/>
+    <!-- body / apron -->
+    <path d="M128 330 Q170 300 214 330 L224 480 L120 480 Z" fill="#5a7bb5"/>
+    <path d="M140 360 L202 360 L212 488 L132 488 Z" fill="#e9dcc2" stroke="#c7b48e" stroke-width="2"/>
+    <!-- back arm raising mallet -->
+    <path d="M140 345 Q110 300 150 262" stroke="#5a7bb5" stroke-width="22" fill="none"/>
+    <circle cx="152" cy="258" r="13" fill="#e8b98f"/>
+    <rect x="148" y="196" width="10" height="70" rx="4" fill="#8a6a45" transform="rotate(25 153 258)"/>
+    <rect x="160" y="176" width="54" height="34" rx="6" fill="#6b5236" transform="rotate(25 153 258)"/>
+    <!-- front arm holding chisel -->
+    <path d="M205 350 Q260 380 300 398" stroke="#5a7bb5" stroke-width="22" fill="none"/>
+    <circle cx="302" cy="400" r="12" fill="#e8b98f"/>
+    <line x1="292" y1="394" x2="328" y2="410" stroke="#7d8790" stroke-width="7"/>
+    <!-- head -->
+    <circle cx="172" cy="282" r="36" fill="#e8b98f"/>
+    <path d="M138 272 Q150 236 190 240 Q214 246 210 270 Q190 256 160 262 Z" fill="#4a3324"/>
+    <circle cx="190" cy="284" r="3.5" fill="#202020"/>
+    <path d="M186 300 Q194 304 200 298" stroke="#8a4b2d" stroke-width="3" fill="none"/>
+    <!-- safety goggles strap -->
+    <path d="M150 276 L206 278" stroke="#202020" stroke-width="3" opacity="0.6"/>
+  </g>
+
+  <!-- motion marks on the mallet -->
+  <g stroke="#6b6b6b" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6">
+    <path d="M232 170 Q250 190 248 214"/>
+    <path d="M246 160 Q268 184 264 212"/>
+  </g>
+</svg>

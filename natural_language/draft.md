@@ -133,7 +133,7 @@ scientific tools with how researchers learn to use them and carry out science.
 ## Teaching natural-language science
 
 I teach these ideas through my workshop Using Natural Language to Do Science:
-How Agentic AI Empowers Astronomers.
+How Agentic AI Is Changing Physics.
 It shows researchers how natural language can become the starting point for
 scientific work: understanding unfamiliar
 software, developing analyses, running and debugging code, interrogating results
@@ -147,10 +147,12 @@ way confidently while retaining the
 scientific understanding, judgement and autonomy needed to direct the science.
 
 [View the workshop slides online][slides] or [download them as
-PowerPoint][slides-pptx]. This version focuses on PyAutoLens.
+PowerPoint][slides-pptx]. A [version focused on PyAutoLens][lens-slides] is
+also available.
 
-[slides]: ../talks/natural_language_lens/
-[slides-pptx]: NaturalLanguageLens.pptx
+[slides]: ../talks/natural_language_science/
+[slides-pptx]: NaturalLanguageScience.pptx
+[lens-slides]: ../talks/natural_language_lens/
 [lens-assistant]: https://github.com/PyAutoLabs/autolens_assistant
 [galaxy-assistant]: https://github.com/PyAutoLabs/autogalaxy_assistant
 [fit-assistant]: https://github.com/PyAutoLabs/autofit_assistant

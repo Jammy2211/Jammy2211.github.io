@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 820" width="560" height="820" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <!-- The engineered loop: you set the goal, the correctness test and the
+       budget; the agent profiles, hypothesises, edits and verifies. Blue twin of
+       manual_optimisation_loop.svg. -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a4fd6"/>
+    </marker>
+  </defs>
+  <rect width="560" height="820" fill="white"/>
+
+  <!-- You -->
+  <rect x="130" y="20" width="300" height="90" rx="14" fill="white" stroke="#1a4fd6" stroke-width="4"/>
+  <text x="280" y="60" text-anchor="middle" font-size="28" font-weight="700" fill="#202020">You</text>
+  <text x="280" y="92" text-anchor="middle" font-size="21" fill="#6b6b6b">set goal, test, budget</text>
+  <line x1="280" y1="110" x2="280" y2="168" stroke="#1a4fd6" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- loop ring -->
+  <circle cx="280" cy="405" r="185" fill="none" stroke="#1a4fd6" stroke-width="4"/>
+  <g fill="#1a4fd6">
+    <path d="M0,-11 L18,0 L0,11 z" transform="translate(411 274) rotate(45)"/>
+    <path d="M0,-11 L18,0 L0,11 z" transform="translate(411 536) rotate(135)"/>
+    <path d="M0,-11 L18,0 L0,11 z" transform="translate(149 536) rotate(225)"/>
+    <path d="M0,-11 L18,0 L0,11 z" transform="translate(149 274) rotate(315)"/>
+  </g>
+
+  <!-- loop nodes -->
+  <g>
+    <rect x="175" y="178" width="210" height="84" rx="14" fill="#e8eefc" stroke="#1a4fd6" stroke-width="4"/>
+    <text x="280" y="215" text-anchor="middle" font-size="27" font-weight="700" fill="#202020">Profile</text>
+    <text x="280" y="244" text-anchor="middle" font-size="19" fill="#6b6b6b">time every block</text>
+
+    <rect x="345" y="363" width="200" height="84" rx="14" fill="#e8eefc" stroke="#1a4fd6" stroke-width="4"/>
+    <text x="445" y="400" text-anchor="middle" font-size="27" font-weight="700" fill="#202020">Hypothesise</text>
+    <text x="445" y="429" text-anchor="middle" font-size="19" fill="#6b6b6b">a speed-up</text>
+
+    <rect x="175" y="548" width="210" height="84" rx="14" fill="#e8eefc" stroke="#1a4fd6" stroke-width="4"/>
+    <text x="280" y="585" text-anchor="middle" font-size="27" font-weight="700" fill="#202020">Edit</text>
+    <text x="280" y="614" text-anchor="middle" font-size="19" fill="#6b6b6b">make the change</text>
+
+    <rect x="15" y="363" width="200" height="84" rx="14" fill="#e8eefc" stroke="#1a4fd6" stroke-width="4"/>
+    <text x="115" y="400" text-anchor="middle" font-size="27" font-weight="700" fill="#202020">Verify</text>
+    <text x="115" y="429" text-anchor="middle" font-size="19" fill="#6b6b6b">correct? keep/revert</text>
+  </g>
+
+  <!-- centre label -->
+  <text x="280" y="398" text-anchor="middle" font-size="22" font-style="italic" fill="#6b6b6b">repeat</text>
+  <text x="280" y="426" text-anchor="middle" font-size="22" font-style="italic" fill="#6b6b6b">overnight</text>
+
+  <!-- footer -->
+  <text x="280" y="700" text-anchor="middle" font-size="24" font-weight="700" fill="#202020">Loop engineering</text>
+  <text x="280" y="732" text-anchor="middle" font-size="20" fill="#6b6b6b">the agent turns the loop,</text>
+  <text x="280" y="760" text-anchor="middle" font-size="20" fill="#6b6b6b">you design it</text>
+</svg>

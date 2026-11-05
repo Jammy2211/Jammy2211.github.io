@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 820" width="560" height="820" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <!-- An original illustration: two scientists (a lensing researcher and a
+       disk-galaxy expert) studying a spiral disk galaxy on a screen, talking
+       in natural language. -->
+  <defs>
+    <radialGradient id="core" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff6d6"/>
+      <stop offset="0.35" stop-color="#ffd98a" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffd98a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="disk" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#b9d4ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#b9d4ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="560" height="820" fill="white"/>
+
+  <!-- screen -->
+  <rect x="40" y="30" width="480" height="400" rx="16" fill="#0b1026" stroke="#3b4a63" stroke-width="6"/>
+  <rect x="250" y="430" width="60" height="40" fill="#9aa3ad"/>
+  <rect x="200" y="468" width="160" height="12" rx="4" fill="#9aa3ad"/>
+
+  <!-- background stars -->
+  <g fill="white">
+    <circle cx="80" cy="70" r="1.8"/><circle cx="470" cy="80" r="2.2"/>
+    <circle cx="120" cy="380" r="1.6"/><circle cx="490" cy="360" r="1.8"/>
+    <circle cx="430" cy="140" r="1.4"/><circle cx="95" cy="200" r="1.4"/>
+    <circle cx="300" cy="60" r="1.2"/><circle cx="210" cy="400" r="1.4"/>
+  </g>
+
+  <!-- spiral disk galaxy, tilted -->
+  <g transform="translate(280 230) rotate(-25) scale(1 0.62)">
+    <circle r="170" fill="url(#disk)"/>
+    <g fill="none" stroke="#cfe0ff" stroke-linecap="round" opacity="0.9">
+      <path d="M0 0 C 40 -10 80 -50 70 -100 C 60 -150 -10 -165 -70 -140" stroke-width="16" opacity="0.55"/>
+      <path d="M0 0 C -40 10 -80 50 -70 100 C -60 150 10 165 70 140" stroke-width="16" opacity="0.55"/>
+      <path d="M0 0 C 40 -10 80 -50 70 -100 C 60 -150 -10 -165 -70 -140" stroke-width="6"/>
+      <path d="M0 0 C -40 10 -80 50 -70 100 C -60 150 10 165 70 140" stroke-width="6"/>
+    </g>
+    <g fill="#ff9fc4">
+      <circle cx="78" cy="-80" r="5"/><circle cx="20" cy="-150" r="4"/>
+      <circle cx="-78" cy="80" r="5"/><circle cx="-20" cy="150" r="4"/>
+      <circle cx="-60" cy="-140" r="3.5"/><circle cx="60" cy="140" r="3.5"/>
+    </g>
+    <circle r="70" fill="url(#core)"/>
+  </g>
+
+  <!-- rotation-curve style annotation -->
+  <g stroke="#ffd34d" stroke-width="3" fill="none" stroke-dasharray="8 6">
+    <ellipse cx="280" cy="230" rx="160" ry="92" transform="rotate(-25 280 230)"/>
+  </g>
+  <text x="456" y="404" text-anchor="end" font-size="18" fill="#ffd34d" font-weight="700">disk + bulge?</text>
+
+  <!-- two scientists -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- left: lensing researcher -->
+    <path d="M60 820 L60 700 Q110 650 160 700 L160 820 Z" fill="#3b4a63"/>
+    <circle cx="110" cy="640" r="40" fill="#e8b98f"/>
+    <path d="M72 630 Q78 596 112 596 Q148 598 148 630 Q130 614 100 620 Z" fill="#4a3324"/>
+    <!-- right: disk-galaxy expert -->
+    <path d="M400 820 L400 700 Q450 650 500 700 L500 820 Z" fill="#7a3fd1"/>
+    <circle cx="450" cy="640" r="40" fill="#c99470"/>
+    <path d="M410 640 Q408 596 450 594 Q494 596 490 640 Q480 612 450 612 Q420 612 410 640 Z" fill="#202020"/>
+    <circle cx="436" cy="644" r="9" fill="none" stroke="#202020" stroke-width="3"/>
+    <circle cx="464" cy="644" r="9" fill="none" stroke="#202020" stroke-width="3"/>
+    <line x1="445" y1="644" x2="455" y2="644" stroke="#202020" stroke-width="3"/>
+  </g>
+
+  <!-- speech bubbles -->
+  <g>
+    <rect x="30" y="500" width="250" height="74" rx="14" fill="#e8eefc" stroke="#1a4fd6" stroke-width="3"/>
+    <path d="M100 574 L110 598 L126 574 Z" fill="#e8eefc" stroke="#1a4fd6" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="102" y="568" width="26" height="8" fill="#e8eefc"/>
+    <text x="155" y="530" text-anchor="middle" font-size="18" fill="#202020">"Can the lens tell us</text>
+    <text x="155" y="556" text-anchor="middle" font-size="18" fill="#202020">how massive the disk is?"</text>
+
+    <rect x="290" y="500" width="250" height="74" rx="14" fill="#efe9fb" stroke="#7a3fd1" stroke-width="3"/>
+    <path d="M440 574 L450 598 L466 574 Z" fill="#efe9fb" stroke="#7a3fd1" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="442" y="568" width="26" height="8" fill="#efe9fb"/>
+    <text x="415" y="530" text-anchor="middle" font-size="18" fill="#202020">"Yes, if we model</text>
+    <text x="415" y="556" text-anchor="middle" font-size="18" fill="#202020">the bulge separately..."</text>
+  </g>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 820" width="560" height="820" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <!-- The chatbot workflow: every step goes through you. Matches
+       agent_loop.svg in size and style. -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a4fd6"/>
+    </marker>
+  </defs>
+  <rect width="560" height="820" fill="white"/>
+
+  <!-- You: paste the error -->
+  <rect x="150" y="20" width="300" height="90" rx="14" fill="white" stroke="#1a4fd6" stroke-width="4"/>
+  <text x="300" y="60" text-anchor="middle" font-size="28" font-weight="700" fill="#202020">You</text>
+  <text x="300" y="92" text-anchor="middle" font-size="21" fill="#6b6b6b">paste in the code and error</text>
+  <line x1="300" y1="110" x2="300" y2="178" stroke="#1a4fd6" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- Chatbot -->
+  <rect x="150" y="188" width="300" height="90" rx="14" fill="#e8eefc" stroke="#1a4fd6" stroke-width="4"/>
+  <text x="300" y="228" text-anchor="middle" font-size="28" font-weight="700" fill="#202020">Chatbot</text>
+  <text x="300" y="260" text-anchor="middle" font-size="21" fill="#6b6b6b">writes an answer</text>
+  <line x1="300" y1="278" x2="300" y2="346" stroke="#1a4fd6" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- You: copy back -->
+  <rect x="150" y="356" width="300" height="90" rx="14" fill="white" stroke="#1a4fd6" stroke-width="4"/>
+  <text x="300" y="396" text-anchor="middle" font-size="28" font-weight="700" fill="#202020">You</text>
+  <text x="300" y="428" text-anchor="middle" font-size="21" fill="#6b6b6b">copy it into your code</text>
+  <line x1="300" y1="446" x2="300" y2="514" stroke="#1a4fd6" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <!-- You: run it -->
+  <rect x="150" y="524" width="300" height="90" rx="14" fill="white" stroke="#1a4fd6" stroke-width="4"/>
+  <text x="300" y="564" text-anchor="middle" font-size="28" font-weight="700" fill="#202020">You</text>
+  <text x="300" y="596" text-anchor="middle" font-size="21" fill="#6b6b6b">run it, hit a new error</text>
+
+  <!-- back to the top -->
+  <path d="M150 569 H80 Q60 569 60 549 V85 Q60 65 80 65 H140" fill="none" stroke="#1a4fd6" stroke-width="4" stroke-dasharray="12 9" marker-end="url(#arrow)"/>
+  <text x="44" y="320" text-anchor="middle" font-size="22" font-style="italic" fill="#6b6b6b" transform="rotate(-90 44 320)">repeat</text>
+
+  <!-- summary -->
+  <text x="300" y="700" text-anchor="middle" font-size="24" fill="#6b6b6b">It only knows what you paste.</text>
+  <text x="300" y="736" text-anchor="middle" font-size="24" fill="#6b6b6b">Every step goes through you.</text>
+</svg>

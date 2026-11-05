@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" width="600" height="720" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <!-- An original illustration: a person at a computer, asking in plain
+       words; the terminal does the work. -->
+  <rect width="600" height="720" fill="white"/>
+
+  <!-- speech bubble -->
+  <g>
+    <rect x="20" y="30" width="560" height="150" rx="26" fill="#e8eefc" stroke="#1a4fd6" stroke-width="5"/>
+    <path d="M120 176 L100 238 L178 178 Z" fill="#e8eefc" stroke="#1a4fd6" stroke-width="5" stroke-linejoin="round"/>
+    <rect x="110" y="170" width="70" height="12" fill="#e8eefc"/>
+    <text x="300" y="92" text-anchor="middle" font-size="30" font-weight="700" fill="#202020">"Install PyAutoLens</text>
+    <text x="300" y="134" text-anchor="middle" font-size="30" font-weight="700" fill="#202020">and run my fit on the HPC"</text>
+  </g>
+
+  <!-- person -->
+  <g fill="#3b4a6b">
+    <circle cx="140" cy="330" r="58"/>
+    <path d="M40 620 Q40 430 140 420 Q240 430 250 560 L250 620 Z"/>
+  </g>
+  <!-- hair -->
+  <path d="M84 318 Q90 262 142 262 Q196 264 200 320 Q170 294 140 300 Q108 296 84 318 Z" fill="#202020"/>
+  <!-- arm towards keyboard -->
+  <path d="M200 500 Q260 560 330 580" fill="none" stroke="#3b4a6b" stroke-width="40" stroke-linecap="round"/>
+
+  <!-- desk -->
+  <rect x="0" y="620" width="600" height="24" rx="6" fill="#c8ced8"/>
+
+  <!-- monitor -->
+  <g>
+    <rect x="300" y="300" width="270" height="200" rx="14" fill="#1e2433" stroke="#9aa6b8" stroke-width="5"/>
+    <g font-family="DejaVu Sans Mono, Menlo, monospace" font-size="17">
+      <text x="320" y="338" fill="#7ee787">$ pip install autolens</text>
+      <text x="320" y="364" fill="#c9d1d9">  ✓ installed</text>
+      <text x="320" y="394" fill="#7ee787">$ sbatch fit.sh</text>
+      <text x="320" y="420" fill="#c9d1d9">  job 81427 queued</text>
+      <text x="320" y="450" fill="#7ee787">$ squeue -u me</text>
+      <text x="320" y="476" fill="#c9d1d9">  RUNNING  0:42</text>
+    </g>
+  </g>
+  <!-- monitor stand -->
+  <rect x="418" y="500" width="34" height="100" fill="#9aa6b8"/>
+  <rect x="375" y="598" width="120" height="22" rx="6" fill="#9aa6b8"/>
+
+  <!-- sparkles near the screen -->
+  <g fill="#ffb300">
+    <path d="M555 250 l7 20 l20 7 l-20 7 l-7 20 l-7 -20 l-20 -7 l20 -7 z"/>
+    <path d="M300 255 l5 14 l14 5 l-14 5 l-5 14 l-5 -14 l-14 -5 l14 -5 z"/>
+  </g>
+</svg>

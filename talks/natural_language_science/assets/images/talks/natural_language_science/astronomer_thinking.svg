@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 720" width="500" height="720">
+  <!-- An original illustration: an astronomer thinking, with the
+       COSMOS-Web Ring in their thought bubble. Same style as
+       talking_to_computer.svg. -->
+  <defs>
+    <radialGradient id="lens" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff6d8"/>
+      <stop offset="0.35" stop-color="#ffb347"/>
+      <stop offset="1" stop-color="#ffb347" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="500" height="720" fill="white"/>
+
+  <!-- thought cloud -->
+  <g fill="#e8eefc" stroke="#1a4fd6" stroke-width="5">
+    <path d="M150 210
+             Q100 210 100 165 Q100 120 150 118
+             Q160 60 225 62 Q270 20 330 50 Q395 35 415 95
+             Q470 110 462 165 Q462 225 400 222
+             Q380 262 320 250 Q270 280 225 248 Q170 262 150 210 Z"/>
+    <circle cx="190" cy="300" r="20"/>
+    <circle cx="165" cy="345" r="13"/>
+    <circle cx="150" cy="380" r="8"/>
+  </g>
+  <!-- the ring, inside the cloud -->
+  <rect x="215" y="85" width="170" height="150" rx="14" fill="#14100c"/>
+  <circle cx="300" cy="160" r="52" fill="none" stroke="#e08a2e" stroke-width="13" opacity="0.9"/>
+  <circle cx="300" cy="160" r="30" fill="url(#lens)"/>
+  <circle cx="300" cy="160" r="6" fill="#fffbe8"/>
+  <circle cx="322" cy="222" r="7" fill="#d9a441" opacity="0.9"/>
+
+  <!-- stars -->
+  <g fill="#ffb300">
+    <path d="M45 280 l6 17 l17 6 l-17 6 l-6 17 l-6 -17 l-17 -6 l17 -6 z"/>
+    <path d="M330 330 l8 22 l22 8 l-22 8 l-8 22 l-8 -22 l-22 -8 l22 -8 z"/>
+    <path d="M440 290 l5 13 l13 5 l-13 5 l-5 13 l-5 -13 l-13 -5 l13 -5 z"/>
+    <path d="M405 470 l6 16 l16 6 l-16 6 l-6 16 l-6 -16 l-16 -6 l16 -6 z"/>
+    <path d="M60 30 l5 13 l13 5 l-13 5 l-5 13 l-5 -13 l-13 -5 l13 -5 z"/>
+  </g>
+
+  <!-- person -->
+  <g fill="#3b4a6b">
+    <circle cx="150" cy="470" r="62"/>
+    <path d="M30 720 Q30 570 150 555 Q270 570 275 720 Z"/>
+  </g>
+  <!-- hair -->
+  <path d="M90 458 Q94 398 152 396 Q212 398 214 462 Q182 430 150 437 Q116 432 90 458 Z" fill="#202020"/>
+  <!-- glasses -->
+  <g fill="none" stroke="#e8eefc" stroke-width="5">
+    <circle cx="128" cy="478" r="15"/>
+    <circle cx="174" cy="478" r="15"/>
+    <path d="M143 478 L159 478"/>
+  </g>
+  <!-- hand on chin -->
+  <path d="M250 700 Q262 600 205 540" fill="none" stroke="#3b4a6b" stroke-width="38" stroke-linecap="round"/>
+  <circle cx="196" cy="530" r="24" fill="#4a5a7e"/>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 720" width="600" height="720">
+  <!-- An original illustration: a glass of glowing "AI" drink with a
+       circuit pattern, ice, bubbles and a bendy straw. -->
+  <defs>
+    <linearGradient id="drink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff4fa3"/>
+      <stop offset="0.55" stop-color="#b03adf"/>
+      <stop offset="1" stop-color="#5a2bd6"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="0.25" stop-color="#ffffff" stop-opacity="0.1"/>
+      <stop offset="0.8" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.5">
+      <stop offset="0" stop-color="#ff7ac2" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ff7ac2" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="inside">
+      <path d="M150 250 L450 250 L420 640 Q418 660 398 660 L202 660 Q182 660 180 640 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- glow behind the glass -->
+  <ellipse cx="300" cy="430" rx="290" ry="300" fill="url(#glow)"/>
+
+  <!-- shadow -->
+  <ellipse cx="300" cy="680" rx="150" ry="16" fill="#000" opacity="0.12"/>
+
+  <!-- straw (behind the rim) -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M330 600 L375 200 Q380 160 420 150 L500 130" stroke="#1a4fd6" stroke-width="26"/>
+    <path d="M330 600 L375 200 Q380 160 420 150 L500 130" stroke="#ffffff" stroke-width="26" stroke-dasharray="18 22" opacity="0.85"/>
+  </g>
+
+  <!-- the drink -->
+  <g clip-path="url(#inside)">
+    <rect x="140" y="250" width="320" height="420" fill="url(#drink)"/>
+    <!-- surface -->
+    <ellipse cx="300" cy="252" rx="152" ry="16" fill="#ff8cc6"/>
+
+    <!-- circuit traces -->
+    <g stroke="#ffd6f0" stroke-width="5" fill="none" opacity="0.75" stroke-linejoin="round">
+      <path d="M170 330 H230 V375 H275"/>
+      <path d="M190 570 H260 V615"/>
+      <path d="M440 350 H380 V395 H330"/>
+      <path d="M420 590 H370 V550"/>
+    </g>
+    <g fill="#ffffff">
+      <circle cx="275" cy="375" r="9"/>
+      <circle cx="260" cy="615" r="9"/>
+      <circle cx="330" cy="395" r="9"/>
+      <circle cx="370" cy="550" r="9"/>
+      <circle cx="170" cy="330" r="6"/>
+      <circle cx="440" cy="350" r="6"/>
+    </g>
+
+    <!-- ice cubes -->
+    <g fill="#ffffff" fill-opacity="0.35" stroke="#ffffff" stroke-opacity="0.8" stroke-width="3">
+      <rect x="190" y="262" width="62" height="58" rx="10" transform="rotate(-12 221 291)"/>
+      <rect x="262" y="270" width="56" height="54" rx="10" transform="rotate(9 290 297)"/>
+    </g>
+
+    <!-- bubbles -->
+    <g fill="none" stroke="#ffffff" stroke-width="3" opacity="0.8">
+      <circle cx="400" cy="300" r="9"/>
+      <circle cx="410" cy="470" r="6"/>
+      <circle cx="220" cy="610" r="8"/>
+      <circle cx="390" cy="620" r="5"/>
+    </g>
+
+    <!-- AI label in the drink -->
+    <text x="300" y="520" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="120" font-weight="800" fill="#ffffff" opacity="0.95">AI</text>
+  </g>
+
+  <!-- glass -->
+  <path d="M130 170 L470 170 L422 645 Q419 675 390 675 L210 675 Q181 675 178 645 Z" fill="url(#glass)" stroke="#9aa6b8" stroke-width="5" stroke-linejoin="round"/>
+  <ellipse cx="300" cy="170" rx="170" ry="20" fill="none" stroke="#9aa6b8" stroke-width="5"/>
+  <!-- highlight -->
+  <path d="M165 210 L205 620" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- sparkles -->
+  <g fill="#ffb300">
+    <path d="M90 120 l10 28 l28 10 l-28 10 l-10 28 l-10 -28 l-28 -10 l28 -10 z"/>
+    <path d="M520 300 l7 20 l20 7 l-20 7 l-7 20 l-7 -20 l-20 -7 l20 -7 z"/>
+    <path d="M70 470 l6 16 l16 6 l-16 6 l-6 16 l-6 -16 l-16 -6 l16 -6 z"/>
+    <path d="M540 520 l5 14 l14 5 l-14 5 l-5 14 l-5 -14 l-14 -5 l14 -5 z"/>
+  </g>
+</svg>
