@@ -29,6 +29,14 @@ science or software. You describe what you want to understand, and an AI
 coding agent turns that request into an interactive analysis where you can
 inspect the data, ask questions, change the model and learn as you go.
 
+A galaxy’s gravity can bend light from a more distant galaxy into arcs or a
+ring. This is strong gravitational lensing. I use these distorted images to
+measure the matter we cannot see, including dark matter and black holes.
+
+<figure class="lensing-schematic">
+<img src="../assets/images/strong_lens_schematic.png" width="1000" height="334" decoding="async" alt="Strong-lensing schematic: light from a distant source galaxy on the right bends around a foreground lens galaxy and reaches the James Webb Space Telescope on the left along different paths." />
+</figure>
+
 You can weigh a galaxy yourself. The COSMOS-Web Ring is one
 of the most striking gravitational lenses the James Webb Space Telescope has
 found. It was discovered in the COSMOS-Web survey by
