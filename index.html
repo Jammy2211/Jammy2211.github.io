@@ -140,17 +140,21 @@ body.custom-background { background-color: #ffffff; }
 <figure class="wp-block-image is-resized"><img fetchpriority="high" decoding="async" width="285" height="300" src="wp-content/uploads/2021/04/Picture-e1619261190979-285x300.jpeg" alt="James Nightingale" class="wp-image-2533" srcset="wp-content/uploads/2021/04/Picture-e1619261190979-285x300.jpeg 285w, wp-content/uploads/2021/04/Picture-e1619261190979-768x809.jpeg 768w, wp-content/uploads/2021/04/Picture-e1619261190979.jpeg 852w" sizes="(max-width: 285px) 85vw, 285px" /></figure>
 <div class="home-intro-text">
 <p class="has-medium-font-size"><strong>Hi, I&#8217;m James Nightingale.</strong> I&#8217;m an observational cosmologist and Ernest Rutherford Fellow at Newcastle University, and I spend my days weighing galaxies with light that gravity has bent.</p>
-<p class="has-medium-font-size"><strong>I believe natural language is becoming the primary interface for doing science.</strong></p>
-<p>To show you what I mean: do you want to measure the mass of a galaxy?</p>
 </div>
 </div>
 <p>A galaxy’s gravity can bend light from a more distant galaxy into arcs or a ring. This is strong gravitational lensing. I use these distorted images to measure the matter we cannot see, including dark matter and black holes.</p>
 <figure class="lensing-schematic">
 <img src="assets/images/strong_lens_schematic.png" width="1000" height="334" decoding="async" alt="Strong-lensing schematic: light from a distant source galaxy on the right bends around a foreground lens galaxy and reaches the James Webb Space Telescope on the left along different paths." />
 </figure>
-<p>Open Claude Code, Codex or another AI coding agent and paste this (the agent installs the <a href="https://github.com/PyAutoLabs/autolens_assistant">PyAutoLens Assistant</a> itself):</p>
+<h2>Weigh a galaxy yourself</h2>
+<p>I believe natural language is becoming the primary interface for doing science. I’m building tools that let you explore this science in ordinary language.</p>
+<p>With the <a href="https://github.com/PyAutoLabs/autolens_assistant">PyAutoLens Assistant</a>, you can analyse a real James Webb Space Telescope image and measure the mass of a galaxy—asking questions and learning as you go.</p>
+<p>Try it with the COSMOS-Web Ring, shown below: light from a distant galaxy bent into a ring by a galaxy in front of it. Open Claude Code, Codex or another AI coding agent and paste this prompt; the agent installs the assistant for you.</p>
 <div class="science-example">
-<p><img src="assets/images/cosmos_web_ring_rgb.png" width="840" height="840" decoding="async" alt="The COSMOS-Web Ring: a near-complete ring of lensed light around a massive galaxy, imaged by JWST." /></p>
+<figure>
+<img src="assets/images/cosmos_web_ring_rgb.png" width="840" height="840" decoding="async" alt="The COSMOS-Web Ring: a near-complete ring of lensed light around a massive galaxy, imaged by JWST." />
+<figcaption class="image-credit">The COSMOS-Web Ring (COSJ100024+015334), imaged by JWST. Credit: COSMOS-Web Lens Survey (COWLS) / Nightingale et al. (2025); discovered by Mercier et al. (2024).</figcaption>
+</figure>
 <div class="science-request">
 <div class="prompt-toolbar"><span id="prompt-label">Your starting prompt</span><button type="button" class="copy-prompt" aria-label="Copy prompt" aria-controls="starting-prompt" hidden>Copy</button></div><span class="screen-reader-text" id="copy-status" role="status" aria-live="polite"></span>
 <pre tabindex="0" aria-labelledby="prompt-label" id="starting-prompt" class="prompt-text"><code>I want to use the PyAutoLens Assistant: https://github.com/PyAutoLabs/autolens_assistant First clone that repository, cd into it and follow its AGENTS.md.
@@ -158,13 +162,9 @@ body.custom-background { background-color: #ffffff; }
 I&#39;d like to understand how gravitational lensing works using the JWST image of the COSMOS-Web Ring that ships with the assistant. Show me the picture, explain what we are looking at, and walk me through fitting a lens model so we can measure the mass inside the ring and see how well the model reproduces the observations. Pitch it at my level: ask me what my background is first. Explain what we are doing as we go, and let me ask questions or change the analysis along the way.</code></pre>
 </div>
 </div>
-<p>In a few minutes on a laptop, you&#8217;ll have weighed a galaxy whose light left it over ten billion years ago: a few hundred billion Suns inside the ring. You don&#8217;t need to know the physics or the code first. The assistant asks your background and teaches you as you go.</p>
-<div class="image-credit">
-<p>The COSMOS-Web Ring (COSJ100024+015334), JWST NIRCam colour image from the COSMOS-Web Lens Survey (COWLS). Credit: COWLS / Nightingale et al. (2025); discovered by Mercier et al. (2024).</p>
-</div>
 <div class="science-request route-card">
 <div class="prompt-toolbar"><span>Prefer a notebook?</span></div>
-<p>Open <a href="https://colab.research.google.com/github/PyAutoLabs/autolens_assistant/blob/2026.9.26.1/docs/colab/cosmos_web_ring_colab.ipynb">the same analysis as a Google Colab notebook</a>, with more explanation. It is recommended if you are learning PyAutoLens and want to see the code.</p>
+<p>Explore <a href="https://colab.research.google.com/github/PyAutoLabs/autolens_assistant/blob/2026.9.26.1/docs/colab/cosmos_web_ring_colab.ipynb">the same analysis in Google Colab</a> to see the code alongside the explanation.</p>
 </div>
 <h2>The tools behind it</h2>
 <ul>
@@ -173,7 +173,7 @@ I&#39;d like to understand how gravitational lensing works using the JWST image 
 <li><a href="https://github.com/PyAutoLabs/HowToLens"><strong>HowToLens</strong></a>: learn the science from first principles (<a href="https://colab.research.google.com/github/PyAutoLabs/HowToLens/blob/2026.9.19.1/notebooks/chapter_1_introduction/tutorial_1_grids_and_galaxies.ipynb">try it in Colab</a>).</li>
 <li><a href="https://arxiv.org/abs/2503.08777"><strong>COWLS</strong></a>: the COSMOS-Web Lens Survey I lead, where this ring comes from.</li>
 </ul>
-<h2>More</h2>
+<h2>Explore my work</h2>
 <ul>
 <li><a href="/natural_language/">Natural Language &amp; AI</a>: the vision, how I build software this way, and my workshop.</li>
 <li><a href="/cosmology/">Cosmology</a>: lensing to study the most massive black holes, the smallest dark matter clumps and the most distant Universe.</li>
